@@ -1,14 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
     <ProjectType>Local</ProjectType>
-    <ProductVersion>9.0.30729</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4CA3F3DF-D2B7-4FA2-874C-BFC4B04286A2}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ApplicationIcon>
-    </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
     <AssemblyName>ikvmc</AssemblyName>
@@ -23,143 +16,214 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject>
     </StartupObject>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>ikvmc\bin\Debug\</OutputPath>
-    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
-    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>TRACE;DEBUG;STATIC_COMPILER;EMITTERS</DefineConstants>
     <DocumentationFile>
     </DocumentationFile>
-    <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
     <NoWarn>
     </NoWarn>
-    <Optimize>false</Optimize>
     <RegisterForComInterop>false</RegisterForComInterop>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningLevel>4</WarningLevel>
-    <DebugType>full</DebugType>
-    <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
-      <HintPath>packages\ICSharpCode.SharpZipLib.dll.0.85.4.369\lib\net20\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
+    <Reference Update="System">
       <Name>System</Name>
     </Reference>
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Xml">
+    <Reference Update="System.Xml">
       <Name>System.XML</Name>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ikvmc\AotTypeWrapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ikvmc\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ikvmc\AssemblyResolver.cs" />
-    <Compile Include="ikvmc\Compiler.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ikvmc\CompilerClassLoader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ikvmc\FakeTypes.cs" />
-    <Compile Include="ikvmc\Proxy.cs" />
-    <Compile Include="ikvmc\remapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\AssemblyClassLoader.cs" />
-    <Compile Include="runtime\atomic.cs" />
-    <Compile Include="runtime\attributes.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\BigEndianBinaryReader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\Boxer.cs" />
-    <Compile Include="runtime\ByteCode.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\ClassFile.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\ClassLoaderWrapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\CodeEmitter.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\compiler.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\CoreClasses.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\DotNetTypeWrapper.cs" />
-    <Compile Include="runtime\DynamicClassLoader.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\DynamicTypeWrapper.cs" />
-    <Compile Include="runtime\intrinsics.cs" />
-    <Compile Include="runtime\JavaException.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\JsrInliner.cs" />
-    <Compile Include="runtime\LambdaMetafactory.cs" />
-    <Compile Include="runtime\LocalVars.cs" />
-    <Compile Include="runtime\MemberWrapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\MethodHandleUtil.cs" />
-    <Compile Include="runtime\profiler.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\ReflectUtil.cs" />
-    <Compile Include="runtime\RuntimeHelperTypes.cs" />
-    <Compile Include="runtime\Serialization.cs" />
-    <Compile Include="runtime\tracer.cs" />
-    <Compile Include="runtime\Types.cs" />
-    <Compile Include="runtime\TypeWrapper.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\verifier.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="runtime\vm.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CommonAssemblyInfo.cs" />
+    <ProjectReference Include="reflect\IKVM.Reflection.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="ICSharpCode.SharpZipLib.dll" Version="0.85.4.369" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.330701">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="reflect\IKVM.Reflection.csproj">
-      <Project>{4cb170ef-dfe6-4a56-9e1b-a85449e827a7}</Project>
-      <Name>IKVM.Reflection</Name>
-    </ProjectReference>
+    <Compile Remove="awt\AssemblyInfo.cs" />
+    <Compile Remove="awt\composite.cs" />
+    <Compile Remove="awt\converter.cs" />
+    <Compile Remove="awt\fonts-0.95.cs" />
+    <Compile Remove="awt\graphics.cs" />
+    <Compile Remove="awt\IconFactory.cs" />
+    <Compile Remove="awt\images.cs" />
+    <Compile Remove="awt\native.cs" />
+    <Compile Remove="awt\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="awt\obj\Debug\net48\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="awt\obj\Debug\net6.0-windows\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Remove="awt\printing.cs" />
+    <Compile Remove="awt\robot.cs" />
+    <Compile Remove="awt\ShellApi.cs" />
+    <Compile Remove="awt\theming.cs" />
+    <Compile Remove="awt\toolkit-0.95.cs" />
+    <Compile Remove="ikvmstub\AssemblyInfo.cs" />
+    <Compile Remove="ikvmstub\ikvmstub.cs" />
+    <Compile Remove="ikvmstub\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="ikvm\AssemblyInfo.cs" />
+    <Compile Remove="ikvm\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="ikvm\obj\Debug\net6.0-windows\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Remove="ikvm\starter.cs" />
+    <Compile Remove="msbuild\AssemblyInfo.cs" />
+    <Compile Remove="msbuild\JavaTask.cs" />
+    <Compile Remove="msbuild\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="openjdk\GenerateSystemCore.cs" />
+    <Compile Remove="reflect\AmbiguousMatchException.cs" />
+    <Compile Remove="reflect\Assembly.cs" />
+    <Compile Remove="reflect\AssemblyName.cs" />
+    <Compile Remove="reflect\BadImageFormatException.cs" />
+    <Compile Remove="reflect\Binder.cs" />
+    <Compile Remove="reflect\ConstructorInfo.cs" />
+    <Compile Remove="reflect\coreclr.cs" />
+    <Compile Remove="reflect\CustomAttributeData.cs" />
+    <Compile Remove="reflect\CustomAttributeNamedArgument.cs" />
+    <Compile Remove="reflect\CustomAttributeTypedArgument.cs" />
+    <Compile Remove="reflect\CustomModifiers.cs" />
+    <Compile Remove="reflect\Emit\AssemblyBuilder.cs" />
+    <Compile Remove="reflect\Emit\ConstructorBuilder.cs" />
+    <Compile Remove="reflect\Emit\CustomAttributeBuilder.cs" />
+    <Compile Remove="reflect\Emit\CustomModifiersBuilder.cs" />
+    <Compile Remove="reflect\Emit\EnumBuilder.cs" />
+    <Compile Remove="reflect\Emit\Enums.cs" />
+    <Compile Remove="reflect\Emit\EventBuilder.cs" />
+    <Compile Remove="reflect\Emit\ExceptionHandler.cs" />
+    <Compile Remove="reflect\Emit\FieldBuilder.cs" />
+    <Compile Remove="reflect\Emit\ILGenerator.cs" />
+    <Compile Remove="reflect\Emit\MethodBuilder.cs" />
+    <Compile Remove="reflect\Emit\ModuleBuilder.cs" />
+    <Compile Remove="reflect\Emit\OpCode.cs" />
+    <Compile Remove="reflect\Emit\OpCodes.cs" />
+    <Compile Remove="reflect\Emit\ParameterBuilder.cs" />
+    <Compile Remove="reflect\Emit\PropertyBuilder.cs" />
+    <Compile Remove="reflect\Emit\SignatureHelper.cs" />
+    <Compile Remove="reflect\Emit\Tokens.cs" />
+    <Compile Remove="reflect\Emit\TypeBuilder.cs" />
+    <Compile Remove="reflect\Enums.cs" />
+    <Compile Remove="reflect\EventInfo.cs" />
+    <Compile Remove="reflect\ExceptionHandlingClause.cs" />
+    <Compile Remove="reflect\FieldInfo.cs" />
+    <Compile Remove="reflect\FieldSignature.cs" />
+    <Compile Remove="reflect\Fusion.cs" />
+    <Compile Remove="reflect\GenericWrappers.cs" />
+    <Compile Remove="reflect\Impl\ITypeOwner.cs" />
+    <Compile Remove="reflect\Impl\MdbWriter.cs" />
+    <Compile Remove="reflect\Impl\PdbWriter.cs" />
+    <Compile Remove="reflect\Impl\SymbolSupport.cs" />
+    <Compile Remove="reflect\InterfaceMapping.cs" />
+    <Compile Remove="reflect\LocalVariableInfo.cs" />
+    <Compile Remove="reflect\ManifestResourceInfo.cs" />
+    <Compile Remove="reflect\MarshalSpec.cs" />
+    <Compile Remove="reflect\MemberInfo.cs" />
+    <Compile Remove="reflect\Metadata\CliHeader.cs" />
+    <Compile Remove="reflect\Metadata\MetadataRW.cs" />
+    <Compile Remove="reflect\Metadata\Tables.cs" />
+    <Compile Remove="reflect\MethodBase.cs" />
+    <Compile Remove="reflect\MethodBody.cs" />
+    <Compile Remove="reflect\MethodImplMap.cs" />
+    <Compile Remove="reflect\MethodInfo.cs" />
+    <Compile Remove="reflect\MethodSignature.cs" />
+    <Compile Remove="reflect\Missing.cs" />
+    <Compile Remove="reflect\Module.cs" />
+    <Compile Remove="reflect\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="reflect\ParameterInfo.cs" />
+    <Compile Remove="reflect\ParameterModifier.cs" />
+    <Compile Remove="reflect\Projection.cs" />
+    <Compile Remove="reflect\Properties\AssemblyInfo.cs" />
+    <Compile Remove="reflect\PropertyInfo.cs" />
+    <Compile Remove="reflect\PropertySignature.cs" />
+    <Compile Remove="reflect\Reader\AssemblyReader.cs" />
+    <Compile Remove="reflect\Reader\Authenticode.cs" />
+    <Compile Remove="reflect\Reader\ByteReader.cs" />
+    <Compile Remove="reflect\Reader\EventInfoImpl.cs" />
+    <Compile Remove="reflect\Reader\Field.cs" />
+    <Compile Remove="reflect\Reader\GenericTypeParameter.cs" />
+    <Compile Remove="reflect\Reader\MetadataReader.cs" />
+    <Compile Remove="reflect\Reader\Method.cs" />
+    <Compile Remove="reflect\Reader\ModuleReader.cs" />
+    <Compile Remove="reflect\Reader\PEReader.cs" />
+    <Compile Remove="reflect\Reader\PropertyInfoImpl.cs" />
+    <Compile Remove="reflect\Reader\ResourceModule.cs" />
+    <Compile Remove="reflect\Reader\TypeDefImpl.cs" />
+    <Compile Remove="reflect\Signature.cs" />
+    <Compile Remove="reflect\StandAloneMethodSig.cs" />
+    <Compile Remove="reflect\StrongNameKeyPair.cs" />
+    <Compile Remove="reflect\Type.cs" />
+    <Compile Remove="reflect\TypeInfo.cs" />
+    <Compile Remove="reflect\TypeNameParser.cs" />
+    <Compile Remove="reflect\Universe.cs" />
+    <Compile Remove="reflect\Util.cs" />
+    <Compile Remove="reflect\Writer\ByteBuffer.cs" />
+    <Compile Remove="reflect\Writer\Heaps.cs" />
+    <Compile Remove="reflect\Writer\MetadataWriter.cs" />
+    <Compile Remove="reflect\Writer\ModuleWriter.cs" />
+    <Compile Remove="reflect\Writer\PEWriter.cs" />
+    <Compile Remove="reflect\Writer\ResourceSection.cs" />
+    <Compile Remove="reflect\Writer\TextSection.cs" />
+    <Compile Remove="reflect\Writer\VersionInfo.cs" />
+    <Compile Remove="runtime\AssemblyInfo.cs" />
+    <Compile Remove="runtime\Assertions.cs" />
+    <Compile Remove="runtime\ByteCodeHelper.cs" />
+    <Compile Remove="runtime\common.cs" />
+    <Compile Remove="runtime\Dummy.OpenJDK.Core.cs" />
+    <Compile Remove="runtime\DynamicMethodUtils.cs" />
+    <Compile Remove="runtime\ExceptionHelper.cs" />
+    <Compile Remove="runtime\fdlibm\e_hypot.cs" />
+    <Compile Remove="runtime\fdlibm\e_pow.cs" />
+    <Compile Remove="runtime\fdlibm\e_rem_pio2.cs" />
+    <Compile Remove="runtime\fdlibm\fdlibm_h.cs" />
+    <Compile Remove="runtime\fdlibm\k_rem_pio2.cs" />
+    <Compile Remove="runtime\fdlibm\k_tan.cs" />
+    <Compile Remove="runtime\fdlibm\s_cbrt.cs" />
+    <Compile Remove="runtime\fdlibm\s_expm1.cs" />
+    <Compile Remove="runtime\fdlibm\s_floor.cs" />
+    <Compile Remove="runtime\fdlibm\s_log1p.cs" />
+    <Compile Remove="runtime\fdlibm\s_scalbn.cs" />
+    <Compile Remove="runtime\fdlibm\s_tan.cs" />
+    <Compile Remove="runtime\JniAssemblyInfo.cs" />
+    <Compile Remove="runtime\JniInterface.cs" />
+    <Compile Remove="runtime\obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="runtime\obj\Debug\net48\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Remove="runtime\obj\Debug\netstandard2.0\.NETStandard,Version=v2.0.AssemblyAttributes.cs" />
+    <Compile Remove="runtime\openjdk\java.io.cs" />
+    <Compile Remove="runtime\openjdk\java.lang.cs" />
+    <Compile Remove="runtime\openjdk\java.lang.invoke.cs" />
+    <Compile Remove="runtime\openjdk\java.lang.reflect.cs" />
+    <Compile Remove="runtime\openjdk\java.net.cs" />
+    <Compile Remove="runtime\openjdk\java.net.SocketInputStream.cs" />
+    <Compile Remove="runtime\openjdk\java.nio.cs" />
+    <Compile Remove="runtime\openjdk\java.security.cs" />
+    <Compile Remove="runtime\openjdk\java.util.cs" />
+    <Compile Remove="runtime\openjdk\java.util.prefs.cs" />
+    <Compile Remove="runtime\openjdk\misc.cs" />
+    <Compile Remove="runtime\openjdk\NativeInvokerBytecodeGenerator.cs" />
+    <Compile Remove="runtime\openjdk\sun.management.cs" />
+    <Compile Remove="runtime\openjdk\sun.misc.cs" />
+    <Compile Remove="runtime\openjdk\sun.nio.ch.cs" />
+    <Compile Remove="runtime\openjdk\sun.reflect.cs" />
+    <Compile Remove="runtime\openjdk\sun.security.krb5.cs" />
+    <Compile Remove="runtime\openjdk\sun.util.locale.provider.cs" />
+    <Compile Remove="runtime\PassiveWeakDictionary.cs" />
+    <Compile Remove="runtime\stubgen\ClassFileWriter.cs" />
+    <Compile Remove="runtime\stubgen\SerialVersionUID.cs" />
+    <Compile Remove="runtime\stubgen\StubGenerator.cs" />
+    <Compile Remove="runtime\vfs.cs" />
+    <Compile Remove="tools\depcheck.cs" />
+    <Compile Remove="tools\implib.cs" />
+    <Compile Remove="tools\pubkey.cs" />
+    <Compile Remove="tools\SourceLicenseAnalyzer.cs" />
+    <Compile Remove="tools\updbaseaddresses.cs" />
+    <Compile Remove="tools\writeappconfig.cs" />
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
-    <PostBuildEvent>
-    </PostBuildEvent>
-  </PropertyGroup>
+  <PropertyGroup />
 </Project>
