@@ -1,0 +1,129 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE;;DEBUG;STATIC_COMPILER;EMITTERS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE;;DEBUG;STATIC_COMPILER;EMITTERS</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="awt\**" />
+    <Compile Remove="bin-x64\**" />
+    <Compile Remove="bin-x86\**" />
+    <Compile Remove="classpath\**" />
+    <Compile Remove="ikvmc\bin\**" />
+    <Compile Remove="ikvmc\obj\**" />
+    <Compile Remove="ikvmdoc\**" />
+    <Compile Remove="ikvmstub\**" />
+    <Compile Remove="ikvm\**" />
+    <Compile Remove="japi\**" />
+    <Compile Remove="jvm\**" />
+    <Compile Remove="msbuild\**" />
+    <Compile Remove="native\**" />
+    <Compile Remove="nuget\**" />
+    <Compile Remove="openjdk\**" />
+    <Compile Remove="packages\**" />
+    <Compile Remove="reflect\**" />
+    <Compile Remove="runtime\fdlibm\**" />
+    <Compile Remove="runtime\obj\**" />
+    <Compile Remove="runtime\openjdk\**" />
+    <Compile Remove="runtime\stubgen\**" />
+    <Compile Remove="tools\**" />
+    <EmbeddedResource Remove="awt\**" />
+    <EmbeddedResource Remove="bin-x64\**" />
+    <EmbeddedResource Remove="bin-x86\**" />
+    <EmbeddedResource Remove="classpath\**" />
+    <EmbeddedResource Remove="ikvmc\bin\**" />
+    <EmbeddedResource Remove="ikvmc\obj\**" />
+    <EmbeddedResource Remove="ikvmdoc\**" />
+    <EmbeddedResource Remove="ikvmstub\**" />
+    <EmbeddedResource Remove="ikvm\**" />
+    <EmbeddedResource Remove="japi\**" />
+    <EmbeddedResource Remove="jvm\**" />
+    <EmbeddedResource Remove="msbuild\**" />
+    <EmbeddedResource Remove="native\**" />
+    <EmbeddedResource Remove="nuget\**" />
+    <EmbeddedResource Remove="openjdk\**" />
+    <EmbeddedResource Remove="packages\**" />
+    <EmbeddedResource Remove="reflect\**" />
+    <EmbeddedResource Remove="runtime\fdlibm\**" />
+    <EmbeddedResource Remove="runtime\obj\**" />
+    <EmbeddedResource Remove="runtime\openjdk\**" />
+    <EmbeddedResource Remove="runtime\stubgen\**" />
+    <EmbeddedResource Remove="tools\**" />
+    <None Remove="awt\**" />
+    <None Remove="bin-x64\**" />
+    <None Remove="bin-x86\**" />
+    <None Remove="classpath\**" />
+    <None Remove="ikvmc\bin\**" />
+    <None Remove="ikvmc\obj\**" />
+    <None Remove="ikvmdoc\**" />
+    <None Remove="ikvmstub\**" />
+    <None Remove="ikvm\**" />
+    <None Remove="japi\**" />
+    <None Remove="jvm\**" />
+    <None Remove="msbuild\**" />
+    <None Remove="native\**" />
+    <None Remove="nuget\**" />
+    <None Remove="openjdk\**" />
+    <None Remove="packages\**" />
+    <None Remove="reflect\**" />
+    <None Remove="runtime\fdlibm\**" />
+    <None Remove="runtime\obj\**" />
+    <None Remove="runtime\openjdk\**" />
+    <None Remove="runtime\stubgen\**" />
+    <None Remove="tools\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="runtime\AssemblyInfo.cs" />
+    <Compile Remove="runtime\Assertions.cs" />
+    <Compile Remove="runtime\ByteCodeHelper.cs" />
+    <Compile Remove="runtime\common.cs" />
+    <Compile Remove="runtime\Dummy.OpenJDK.Core.cs" />
+    <Compile Remove="runtime\DynamicMethodUtils.cs" />
+    <Compile Remove="runtime\ExceptionHelper.cs" />
+    <Compile Remove="runtime\JniAssemblyInfo.cs" />
+    <Compile Remove="runtime\JniInterface.cs" />
+    <Compile Remove="runtime\PassiveWeakDictionary.cs" />
+    <Compile Remove="runtime\vfs.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ICSharpCode.SharpZipLib.dll" Version="0.85.4.369" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    <PackageReference Include="System.Security.Permissions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="reflect\IKVM.Reflection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="IKVM.OpenJDK.Core">
+      <HintPath>bin\IKVM.OpenJDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Tools">
+      <HintPath>bin\IKVM.OpenJDK.Tools.dll</HintPath>
+    </Reference>
+    <Reference Include="IKVM.OpenJDK.Util">
+      <HintPath>bin\IKVM.OpenJDK.Util.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

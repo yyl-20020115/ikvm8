@@ -107,12 +107,6 @@
     <Compile Include="..\runtime\stubgen\StubGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\reflect\IKVM.Reflection.csproj">
-      <Project>{4CB170EF-DFE6-4A56-9E1B-A85449E827A7}</Project>
-      <Name>IKVM.Reflection</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

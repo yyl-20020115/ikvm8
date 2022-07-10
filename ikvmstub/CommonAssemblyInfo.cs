@@ -23,5 +23,15 @@
 */
 using System.Reflection;
 
-//[assembly: AssemblyTitle("IKVM.Reflection")]
-//[assembly: AssemblyDescription("Alternative implementation of System.Reflection[.Emit]")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Windward Studios (based on work by Jeroen Frijters)")]
+[assembly: AssemblyProduct("IKVM.NET")]
+[assembly: AssemblyCopyright("Copyright (C) 2002-2015, 2018 Jeroen Frijters")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: AssemblyVersion("8.5.0.3")]
+
+#if SIGNCODE
+	#pragma warning disable 1699
+	[assembly: AssemblyKeyName("ikvm-key")]
+#endif
