@@ -33,10 +33,6 @@
     <Reference Include="IKVM.OpenJDK.Tools">
       <HintPath>..\bin\IKVM.OpenJDK.Tools.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Build.Framework" />
-    <Reference Include="Microsoft.Build.Tasks" />
-    <Reference Include="Microsoft.Build.Utilities" />
-    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />

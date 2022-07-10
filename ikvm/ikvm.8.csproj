@@ -65,15 +65,6 @@
     <Reference Include="System">
       <Name>System</Name>
     </Reference>
-    <ProjectReference Include="..\awt\IKVM.AWT.WinForms.8.csproj">
-      <Name>IKVM.AWT.WinForms</Name>
-      <Project>{E00A0FA2-1FD7-4DD9-8C06-7202CE366102}</Project>
-      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
-    </ProjectReference>
-    <ProjectReference Include="..\runtime\IKVM.Runtime.8.csproj">
-      <Project>{F5C7B588-0403-4AF2-A4DE-5697DE21BC2C}</Project>
-      <Name>IKVM.Runtime.8</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\CommonAssemblyInfo.cs">
