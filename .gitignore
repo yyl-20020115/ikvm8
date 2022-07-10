@@ -1,7 +1,7 @@
 *.class
 *.swp
 *.swo
-
+*.backup
 lib
 bin/*.exe
 bin/*.dll
