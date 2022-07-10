@@ -205,7 +205,9 @@ namespace IKVM.Internal
 			}
 			else
 			{
-				throw new InvalidOperationException();
+				//TODO:
+				//throw new InvalidOperationException();
+				System.Diagnostics.Debug.WriteLine("ERROR:BOX");
 			}
 		}
 	}

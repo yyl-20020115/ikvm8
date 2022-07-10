@@ -1,8 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKVM.Runtime.8", "runtime\IKVM.Runtime.8.csproj", "{F5C7B588-0403-4AF2-A4DE-5697DE21BC2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKVM.Runtime", "runtime\IKVM.Runtime.csproj", "{F5C7B588-0403-4AF2-A4DE-5697DE21BC2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ikvm.8", "ikvm\ikvm.8.csproj", "{4FBAFF23-1E48-4977-8C50-30F87E70A8B5}"
 EndProject
@@ -11,8 +11,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ikvmc.8", "ikvmc.8.csproj", "{4CA3F3DF-D2B7-4FA2-874C-BFC4B04286A2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKVM.AWT.WinForms.8", "awt\IKVM.AWT.WinForms.8.csproj", "{E00A0FA2-1FD7-4DD9-8C06-7202CE366102}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ikvm-native", "native\native.9.vcxproj", "{14EC8F2A-90C6-4CFC-AD26-04C9A3392B8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IKVM.Runtime.JNI.8", "runtime\IKVM.Runtime.JNI.8.csproj", "{CEA4FEC4-1D24-4004-908E-F86C8D7AC772}"
 EndProject
@@ -52,11 +50,6 @@ Global
 		{E00A0FA2-1FD7-4DD9-8C06-7202CE366102}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
 		{E00A0FA2-1FD7-4DD9-8C06-7202CE366102}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
 		{E00A0FA2-1FD7-4DD9-8C06-7202CE366102}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{14EC8F2A-90C6-4CFC-AD26-04C9A3392B8E}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{14EC8F2A-90C6-4CFC-AD26-04C9A3392B8E}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
-		{14EC8F2A-90C6-4CFC-AD26-04C9A3392B8E}.Debug|Mixed Platforms.Build.0 = Debug|Win32
-		{14EC8F2A-90C6-4CFC-AD26-04C9A3392B8E}.Debug|Win32.ActiveCfg = Debug|Win32
-		{14EC8F2A-90C6-4CFC-AD26-04C9A3392B8E}.Debug|Win32.Build.0 = Debug|Win32
 		{CEA4FEC4-1D24-4004-908E-F86C8D7AC772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CEA4FEC4-1D24-4004-908E-F86C8D7AC772}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEA4FEC4-1D24-4004-908E-F86C8D7AC772}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
@@ -75,5 +68,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5D226EB-0AE2-4882-BEE2-EC142AE09A40}
 	EndGlobalSection
 EndGlobal
